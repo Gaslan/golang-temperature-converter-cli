@@ -14,8 +14,8 @@ var shouldConvertAgain string
 
 var err error
 
-var errInvalidArguments = errors.New("Invalid arguments")
-var errReadingInput = errors.New("Error reading input")
+var errInvalidArguments = errors.New("invalid arguments")
+var errReadingInput = errors.New("error reading input")
 
 func main() {
 
@@ -42,7 +42,7 @@ func main() {
 
 		fmt.Print("Would you like to convert another temperature ? (y/n) ")
 
-		_, err = fmt.Scanln(shouldConvertAgain)
+		_, err = fmt.Scanln(&shouldConvertAgain)
 
 		if err != nil {
 			printError(errReadingInput)
